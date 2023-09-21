@@ -1,0 +1,20 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url('img/background.jpg');
+ 	background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#form {
+    margin-top: 100px;
+    margin-bottom: 35px;
+}
+
+#form input {
+    width: 400px;
+    border-color:#CCC;
+    outline:0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}

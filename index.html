@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kanban Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-light shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#">Kanban Board</a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Form -->
+    <section id="form">
+        <div class="container">
+            <form onsubmit="createNew(event)">
+                <div class="d-flex justify-content-center mb-3">
+                    <input type="text" class="form-control focus-ring" placeholder="Add Tasks" id="ftodo" name="ftodo" required>
+                    <button type="submit" class="btn btn-primary mx-3 d-flex"><i class="bi bi-plus me-2"></i>Add</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Hero -->
+    <article class="kanban-board container">    
+      <section class="my-5" id="hero">
+        <div class="row g-3">
+          <div class="col-md-4">
+              <div class="card shadow-sm border-0 bg-body-secondary">
+                  <img src="src/img/red.png" class="card-img-top" alt="...">
+                  <div class="card-body" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-title text-center fw-bold">To Do</h5>
+                    <hr>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-body-secondary">
+                <img src="src/img/yellow.png" class="card-img-top" alt="...">
+                <div class="card-body" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <h5 class="card-title text-center fw-bold">On Progress</h5>
+                  <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 bg-body-secondary">
+              <img src="src/img/green.png" class="card-img-top" alt="...">
+              <div class="card-body" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h5 class="card-title text-center fw-bold">Done</h5>
+                <hr>
+              </div>
+          </div>
+      </div>
+      </section>
+    </article>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+    <script src="src/script.js"></script>
+</html>
